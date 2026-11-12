@@ -4,7 +4,7 @@ from flask import Flask, render_template_string, jsonify
 
 app = Flask(__name__)
 
-DB_PATH = 'mock_f1_flat.db'
+DB_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "mock_f1_flat.db")
 
 def get_db_connection():
     """ Connects to the existing SQLite database in the root folder """
